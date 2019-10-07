@@ -1,6 +1,5 @@
 class Application
 
-@@items = []
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
@@ -18,6 +17,6 @@ class Application
         resp.write "Route not found"
       end
 
-      resp.finish
-    end
+    resp.finish
+  end
 end
